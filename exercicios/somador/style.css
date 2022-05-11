@@ -1,0 +1,35 @@
+div{
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 3px 3px 5px black;
+}
+label{
+    font-size: 30px;
+}
+
+input{
+    height: 20px;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 10px;
+    height: 100px;
+    width: 200px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 1px 1px 1px black;
+}
+
+p{
+    font-size: 30px;
+}
