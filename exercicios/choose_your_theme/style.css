@@ -1,0 +1,35 @@
+div{
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 3px 3px 5px black;
+}
+    div.tam{
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+        margin-block: 10px;
+        box-shadow: none;
+    }
+    div.tam:hover{
+        box-shadow: 3px 3px 5px black;
+    }
+    #square1{
+        background-color: red;
+    }
+    #square2{
+        background-color: green;
+    }
+    #square3{
+        background-color: blue;
+    }
+    button{
+        height: 50px;
+        width: 100px;
+    }
