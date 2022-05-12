@@ -6,3 +6,6 @@
 <a href="http://127.0.0.1:5500/exercicios/choose_your_theme/index.html"
 target="_blank">Escolha seu tema!</a>
 <br>
+<a href="http://127.0.0.1:5500/exercicios/tabuada/index.html"
+target="_blank">Tabuada!</a>
+<br>
