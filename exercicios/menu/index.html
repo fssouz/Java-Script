@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            font-family: 'Oswald';
+
+        }
+        .cabecalho{
+            height: 80px;
+            box-sizing: content-box;
+            background-color: rgb(70, 70, 70);
+            border-bottom:solid 5px rgb(46, 46, 46);
+        }
+        .cabecalho a{
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        .logo{
+            height: 80px;
+            padding: 15px;
+        }
+        .logo img {
+            height:100%;
+        }
+        .logo, .menu, .autenticacao{
+            display: inline-block;
+        }
+        .menu-toggle{
+            margin: 20px 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            height: 40px;
+            border: solid 1px #777;
+            display: none;
+            background-color: #555;
+            color: #eee;
+            float: right;
+        }
+        li{
+            display: inline-block;
+        }
+        nav{
+            top:0;
+        }
+        aside{
+           top:46px;
+        }
+        .menu{
+            vertical-align: top;
+            height: 80px;
+            padding: 25px;
+        }
+        .menu ul{
+            margin:0;
+            padding:0;
+        }
+        .menu a{
+            padding: 15px;
+        }
+        .menu a:hover,
+        .menu a.selected{
+            background-color: rgb(122, 122, 122);
+            color: black;
+        }
+       .autenticacao{
+        height: 80px;
+        padding: 25px;
+            float:right;
+        }
+        .botao{
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+        .destaque{
+            background-color: red;
+            color: whitesmoke;
+        }
+
+        @media(max-width:1600px){
+            .autenticacao{
+                display: none;
+            }
+            img {
+                content: url("img/homeII.png");
+            }
+
+        }
+        @media(max-width:1000px){
+            .menu{
+                display: none;
+        }
+            img {
+                content: url("img/homeIII.png");
+            }
+            .menu-toggle{
+                display: inline-block;
+            }
+    }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="img/hohomeI.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+        window.onhashchange = function(e)
+        {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            console.log(oldURL, newURL)
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldMenu && oldMenu.classList.remove('selected')
+            newMenu && newMenu.classList.add('selected')
+        }
+    </script>
+</body>
+
+</html>
