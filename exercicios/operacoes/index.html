@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <label>Operação 
+        <select name="select" id="lista">
+            <option value="1">Adição</option>
+            <option value="2">Subtração</option>
+            <option value="3">Divisão</option>
+            <option value="4">Multiplicação</option>
+          </select></label>
+        <br> <br>
+        <label id="lb">numero1:
+        <input type="number" id="num1" placeholder="digite aqui"></label>
+        <br> <br>
+        <label id="lb">numero2:
+        <input type="number" id="num2" placeholder="digite aqui"></label>
+        <br> <br>
+        <button onclick="calcValores()">Calcular</button>
+        <br>
+        <p id="result"></p>
+    </div>
+    <div id="btnH">
+        <button onclick="show()">Historico</button>
+    </div>
+    <div id="content">
+        <table border="1" id="tabela">
+                <tr>
+                    <th>#</th>
+                    <th>Operação</th>
+                    <th>n1</th>
+                    <th>n2</th>
+                    <th>resposta</th>
+                </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

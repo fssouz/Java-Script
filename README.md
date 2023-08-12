@@ -20,3 +20,6 @@ target="_blank">Barra de Progresso!</a>
 <br>
 <a href="http://fssouz.github.io/Java-Script/exercicios/menu/index.html"
 target="_blank">menu!</a>
+<br>
+<a href="http://fssouz.github.io/Java-Script/exercicios/operacoes/index.html"
+target="_blank">operacoes!</a>
