@@ -23,3 +23,6 @@ target="_blank">menu!</a>
 <br>
 <a href="http://fssouz.github.io/Java-Script/exercicios/operacoes/index.html"
 target="_blank">operacoes!</a>
+<br>
+<a href="http://fssouz.github.io/Java-Script/exercicios/quizpage/index.html"
+target="_blank">quiz page!</a>

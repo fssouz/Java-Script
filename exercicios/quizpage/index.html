@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizPage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Quiz</a>
+    </nav>
+    <div id="home">
+        <p id="titulo"><img src="imagens/info.png" alt="logo"> Questão</p>
+
+        <p id="desc"></p>
+        <p>Escolha uma das alternativas</p>
+        <hr>
+        <br>
+        <section id="questions">
+            <input type="radio" id="A" name="input" value="1">
+            <label id="eA" for="A"></label><br>
+            <input type="radio" id="B" name="input" value="2">
+            <label id="eB" for="B"></label><br>  
+            <input type="radio" id="C" name="input" value="3">
+            <label id="eC" for="C"></label><br>
+            <input type="radio" id="D" name="input" value="4">
+            <label id="eD" for="D"></label><br><br>
+        </section>
+        <div id="btnpos"><button id="btn" onclick="next()" >Next →</button></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

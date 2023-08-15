@@ -1,0 +1,98 @@
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    overflow: hidden;
+    }
+
+nav {
+    background-color: black;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    }
+nav a {
+    font-size: 2rem;
+    width: 1rem;
+    color: white;
+    text-decoration: none;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+}
+
+nav a:hover {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+
+div#home{
+    margin-top:5rem;
+    width: min(75rem,100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+    padding: 1rem;
+    border: 0.1em solid black;
+}
+
+p#titulo{
+    padding: 1rem;
+    display: inline-block;
+    border: 0.1rem;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0.1rem 0.1rem 0.5rem black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+p img {
+    transform: translateY(0.8rem);
+    width: 3rem;
+}
+
+p#desc{
+    padding: 1rem;
+    display: block;
+    box-shadow: 0.1rem 0.1rem 0.5rem black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+input, label{
+    font-size: 1.5rem;
+    list-style: disc;
+    border: 0.1rem solid rgb(116, 113, 113);
+    font-weight: bold;
+    padding: 1rem;
+    list-style-position: inside;
+    margin-bottom: 3rem;
+}
+
+input, label:hover{
+    background-color: rgb(206, 198, 198);
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 1rem;
+    background-color: blue;
+    display:inline-block;
+}
+#btnpos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+button img {
+        width: 1.5rem;
+        transform: translateY(0.2rem);
+    }
