@@ -96,3 +96,7 @@ button img {
         width: 1.5rem;
         transform: translateY(0.2rem);
     }
+
+#resultado{
+    display: none;
+}

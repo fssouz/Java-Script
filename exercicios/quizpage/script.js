@@ -12,6 +12,8 @@ const a = document.getElementById("eA")
 const b = document.getElementById("eB")
 const c = document.getElementById("eC")
 const d = document.getElementById("eD")
+const r = document.getElementById("resultado")
+const h = document.getElementById("home")
 
 function load(cont){
     t.innerHTML=`Questão ${cont+1}`
@@ -39,8 +41,16 @@ function next(){
         load(cont)
     }
     else{
-        btn.style.backgroundColor = "gray"
-        btn.style.cursor = "not-allowed"
+        const rp = document.getElementById("resp")
+        const rh = document.getElementById("resh")
+        rh.innerHTML = "!Title!"
+        rp.innerHTML = "This phrase does not mean nothing"
+        //btn.style.backgroundColor = "gray"
+        //btn.style.cursor = "not-allowed"
+        //h.style.display = "none"
+		$('#resultado').show(1000)
+        r.style.display = "block"
+        $('#home').hide(250)
     }
     console.log(value)
     console.log('cont ',cont)
