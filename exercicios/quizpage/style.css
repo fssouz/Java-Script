@@ -100,3 +100,8 @@ button img {
 #resultado{
     display: none;
 }
+
+#resh{
+    display: flex;
+    justify-content: center;    
+    }

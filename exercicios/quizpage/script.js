@@ -5,7 +5,10 @@ const answers = [
     ['Juazeiro', 'Feira de Santana', 'Barra', 'Salvador'],
     ['Recife','Jaboatão dos Guararapes', 'Olinda', 'Petrolina']
 ]
-const right = [2,4,1]
+const rightAns = ['Belo Horizonte','Salvador','Recife']
+let resp = []
+
+
 const t = document.getElementById("titulo")
 const des = document.getElementById("desc")
 const a = document.getElementById("eA")
@@ -23,15 +26,30 @@ function load(cont){
     c.innerHTML=`${answers[cont][2]}`
     d.innerHTML=`${answers[cont][3]}`
 }
+
+function checkAns(A, B){
+    let i = (A.length - 1)
+    let acertos=0
+    for(i;i>=0;i--){
+        if(A[i]==B[i])
+        {
+            acertos+=1
+        }
+    }
+    return acertos
+}
+
 load(0)
 
 function next(){
     var radios = document.getElementsByTagName('input');
     var value;
+    let qnt=0;
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].type === 'radio' && radios[i].checked) {
             // get value, set checked flag or do whatever you need to
-            value = radios[i].value;       
+            value = radios[i].value;     
+            resp[cont]= answers[cont][value-1]; 
         }
     }
     const btn = document.getElementById("btn")
@@ -43,15 +61,14 @@ function next(){
     else{
         const rp = document.getElementById("resp")
         const rh = document.getElementById("resh")
-        rh.innerHTML = "!Title!"
-        rp.innerHTML = "This phrase does not mean nothing"
+        qnt = checkAns(resp, rightAns)
+        rh.innerHTML = "Finalizado!"
+        rp.innerHTML = `Você acertou ${qnt} questões`
         //btn.style.backgroundColor = "gray"
         //btn.style.cursor = "not-allowed"
         //h.style.display = "none"
-		$('#resultado').show(1000)
+		$('#resultado').fadeIn(750)
         r.style.display = "block"
-        $('#home').hide(250)
+        $('#home').fadeOut(250)
     }
-    console.log(value)
-    console.log('cont ',cont)
 }
