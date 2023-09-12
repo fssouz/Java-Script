@@ -10,15 +10,16 @@ nav {
     background-color: black;
     height: 4rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     }
 nav a {
     font-size: 2rem;
-    width: 1rem;
+    width: 2.5rem;
     color: white;
     text-decoration: none;
     padding-inline: 1rem;
     padding-block: 1rem;
+    margin: 0 0.5rem;
 }
 
 nav a:hover {
@@ -33,7 +34,7 @@ p{
 
 
 div#home, div#resultado{
-    margin-top:5rem;
+    margin-top:3rem;
     width: min(25rem);
     margin-inline: auto;
     padding-inline: 2.4rem;
