@@ -72,3 +72,21 @@ function next(){
         $('#home').fadeOut(250)
     }
 }
+
+
+function fundoSun(){
+    $('body').css('background-color', 'white')
+    $('#home').css('color','black')
+    $('#home').css('border','0.1em solid black')
+    $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem black')
+}
+
+
+function fundoMoon(){
+    $('body').css('background-color', 'rgb(32, 32, 32)')
+    $('#titulo').css('background-color', 'gray')
+    $('#home').css('color','white')
+    $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem white')
+    $('#home').css('border','0.1em solid white')
+    $('#resultado').css('text-color','white')
+}
