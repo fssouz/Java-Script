@@ -34,11 +34,23 @@ p{
 
 div#home, div#resultado{
     margin-top:5rem;
-    width: min(75rem,100%);
+    width: min(25rem);
     margin-inline: auto;
     padding-inline: 2.4rem;
     padding: 1rem;
     border: 0.1em solid black;
+}
+
+@media screen and (min-width:400px) {
+    div#home, div#resultado{
+        width: min(35rem);
+    }
+}
+
+@media screen and (min-width:600px) {
+    div#home, div#resultado{
+        width: max(50rem);
+    }
 }
 
 p#titulo{
@@ -51,10 +63,6 @@ p#titulo{
     font-size: 2rem;
 }
 
-p img {
-    transform: translateY(0.8rem);
-    width: 3rem;
-}
 
 p#desc{
     padding: 1rem;
