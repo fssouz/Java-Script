@@ -19,7 +19,7 @@ const r = document.getElementById("resultado")
 const h = document.getElementById("home")
 
 function load(cont){
-    t.innerHTML=`Questão ${cont+1}`
+    t.innerHTML=`<img src="imagens/info.png" alt="logo"> Questão ${cont+1}`
     des.innerHTML=`${questions[cont]}`
     a.innerHTML=`${answers[cont][0]}`
     b.innerHTML=`${answers[cont][1]}`
@@ -88,5 +88,6 @@ function fundoMoon(){
     $('#home').css('color','white')
     $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem white')
     $('#home').css('border','0.1em solid white')
-    $('#resultado').css('text-color','white')
+    $('#resultado').css('color','white')
+    $('#resultado').css('border','0.1em solid white')
 }

@@ -11,32 +11,37 @@
 <body>
     <nav>
         <a href="#home">Quiz</a>
-        <a id="bsun" href="#" onclick="fundoSun()"><img src="imagens/moon_icon.svg" alt=""></a>
-        <a id="bmoon" href="#" onclick="fundoMoon()"><img src="imagens/sun_icon.svg" alt=""></a>
+        <a id="bmoon" href="#" onclick="fundoMoon()"><img src="imagens/moon_icon.svg" alt=""></a>
+        <a id="bsun" href="#" onclick="fundoSun()"><img src="imagens/sun_icon.svg" alt=""></a>
     </nav>
-    <div id="home">
-        <p id="titulo"><img src="imagens/info.png" alt="logo"> Questão</p>
-
-        <p id="desc"></p>
-        <p>Escolha uma das alternativas</p>
-        <hr>
-        <br>
-        <section id="questions">
-            <input type="radio" id="A" name="input" value="1">
-            <label id="eA" for="A"></label><br>
-            <input type="radio" id="B" name="input" value="2">
-            <label id="eB" for="B"></label><br>  
-            <input type="radio" id="C" name="input" value="3">
-            <label id="eC" for="C"></label><br>
-            <input type="radio" id="D" name="input" value="4">
-            <label id="eD" for="D"></label><br><br>
-        </section>
-        <div id="btnpos"><button id="btn" onclick="next()" >Next →</button></div>
-    </div>
-    <div id="resultado">
-        <h1 id="resh">.</h1>
-        <p id="resp">.</p>
-    </div>
+        <div id="home">
+            <p id="titulo"><img src="imagens/info.png" alt="logo"> Questão</p>
+    
+            <p id="desc"></p>
+            <p>Escolha uma das alternativas</p>
+            <hr>
+            <br>
+            <section id="questions">
+                <input type="radio" id="A" name="input" value="1">
+                <label id="eA" for="A"></label><br>
+                <input type="radio" id="B" name="input" value="2">
+                <label id="eB" for="B"></label><br>  
+                <input type="radio" id="C" name="input" value="3">
+                <label id="eC" for="C"></label><br>
+                <input type="radio" id="D" name="input" value="4">
+                <label id="eD" for="D"></label><br><br>
+            </section>
+            <div id="btnpos"><button id="btn" onclick="next()" >Next →</button></div>
+        </div>
+        <div id="resultado">
+            <h1 id="resh">.</h1>
+            <p id="resp">.</p>
+        </div>
+    <footer>
+        <p>
+            <a href="https://github.com/fssouz" target="_blank"><img src="imagens/github-mark.svg" alt=""></a>
+        </p>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>
