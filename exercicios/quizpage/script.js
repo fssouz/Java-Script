@@ -79,6 +79,8 @@ function fundoSun(){
     $('#home').css('color','black')
     $('#home').css('border','0.1em solid black')
     $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem black')
+    $('#resultado').css('color','black')
+    $('#resultado').css('border','0.1em solid black')
 }
 
 
