@@ -17,9 +17,10 @@ const c = document.getElementById("eC")
 const d = document.getElementById("eD")
 const r = document.getElementById("resultado")
 const h = document.getElementById("home")
+const i= document.getElementById("inf")
 
 function load(cont){
-    t.innerHTML=`<img src="imagens/info.png" alt="logo"> Questão ${cont+1}`
+    t.innerHTML=`Questão ${cont+1}`
     des.innerHTML=`${questions[cont]}`
     a.innerHTML=`${answers[cont][0]}`
     b.innerHTML=`${answers[cont][1]}`
@@ -78,17 +79,16 @@ function fundoSun(){
     $('body').css('background-color', 'white')
     $('#home').css('color','black')
     $('#home').css('border','0.1em solid black')
-    $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem black')
     $('#resultado').css('color','black')
     $('#resultado').css('border','0.1em solid black')
+    $('#titulo').css('background-color', 'white')
 }
 
 
 function fundoMoon(){
     $('body').css('background-color', 'rgb(32, 32, 32)')
-    $('#titulo').css('background-color', 'gray')
+    $('#titulo').css('background-color', 'black')
     $('#home').css('color','white')
-    $('#desc').css('box-shadow','0.1rem 0.1rem 0.5rem white')
     $('#home').css('border','0.1em solid white')
     $('#resultado').css('color','white')
     $('#resultado').css('border','0.1em solid white')
