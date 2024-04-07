@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- . -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <!--.-->
+</head>
+<style>
+  ol{
+    list-style-type: circle
+  }
+</style>
+<body>
+    <section class="content">
+      <h1>Pesquisar character</h1>   
+      <label for="">Nome</label>
+      <input type="text" id="charc">
+      <button type="submit" onclick="pesq()">Pesquisar</button>
+      <div id="results"></div>
+    </section>
+   
+
+    <script> 
+    function pesq(){
+      var inp = document.getElementById('charc')
+      var res = document.getElementById('results')
+      var nchar = inp.value
+
+      fetch(`https://api.tibiadata.com/v4/character/${nchar}`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      res.innerHTML = ``
+      const character = data.character.character; // objeto de personagem
+      const newHtml = `<ol class="boss">
+                    <li class="name">Nome:${character.name}</span>
+                    </li>
+                    <li>
+                        <label>Level:${character.level}</label>
+                    </li>
+                    <li>
+                        <label>Vocation:${character.vocation}</label>
+                    </li>
+                    <li>
+                        <label>Sex:${character.sex}</label>
+                    </li>
+                    <li>
+                        <label>World:${character.world}</label>
+                    </li>
+                    <li>
+                        <label>Account status:${character.account_status}</label>
+                    </li>
+                </ol>`;
+      $('#results').append(newHtml);
+      })
+
+      .catch(error => {
+        res.innerHTML = `<br>Erro`
+        console.error('Erro ao obter dados:', error);
+      })
+    }
+
+
+</script>
+</body>
+</html>
