@@ -29,5 +29,6 @@ target="_blank">quiz page!</a>
 <br>
 <a href="http://fssouz.github.io/Java-Script/exercicios/project_pokedex/index.html"
 target="_blank">Pokedex!</a>
+<br>
 <a href="http://fssouz.github.io/Java-Script/exercicios/bosses_api/bosses.html"
 target="_blank">Bosses: consumindo api!</a>
