@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body{
+        background-color: darkgrey;
+      }
+      #main{
+        width: 500px;
+        margin: auto;
+      }
+
+      #resq {
+  display: flex;
+  justify-content: center;  
+  align-items: center;    
+  flex-direction: column;   
+}
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Quantidade questões</span>
+        <input type="text" id="inp" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <button class="btn btn-primary" type="button" onclick="createInputs()">Criar</button>
+      </div>
+      <div id="quest"></div>
+      <div id="resq"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
