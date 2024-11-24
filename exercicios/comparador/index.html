@@ -38,11 +38,24 @@
     <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">History</a>
+        </div>
+      </div>
+    </nav>
+    
+    <br>
     <div id="main">
       <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Quantidade questões</span>
         <input type="text" id="inp" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        <button class="btn btn-primary" type="button" onclick="createInputs()">Criar</button>
+        <button class="btn btn-primary" type="buttony" onclick="createInputs()">Criar</button>
       </div>
       <div id="quest"></div>
       <div id="resq"></div>

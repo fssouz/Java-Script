@@ -3,7 +3,7 @@ function createInputs() {
     const txtn = document.getElementById('inp');
     const n = Number(txtn.value);
     const dv = document.getElementById('quest');
-    dv.innerHTML=``
+    dv.innerHTML=`<div class="input-group mb-3"><span class="input-group-text">Nome:</span><input type="text" id="iname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div>`
     for(var i =1; i<=n; i++)
     {
         dv.innerHTML += `<div class="input-group mb-3">
@@ -16,14 +16,15 @@ function createInputs() {
 }
 
 
-function compare(n) {
+async function compare(n) {
     var quest = [];
     var resp = [];
     const dv = document.getElementById('resq');
     var acertos = 0;
     dv.innerHTML = ``;
-    nreg++; // Variável nreg deve estar definida anteriormente
-
+    nreg++;
+    const txtin = document.getElementById(`iname`);
+    const vname = txtin.value;
     for (var i = 1; i <= n; i++) {
         const txti1 = document.getElementById(`inpa${i}`);
         const txti2 = document.getElementById(`inpb${i}`);
@@ -46,5 +47,30 @@ function compare(n) {
 
     console.log('quest:', quest);
     console.log('resp:', resp);
+    const title = vname;
+    const data = { title, acertos };
+
+    try {
+        // 
+        const response = await fetch('http://localhost:3001/registro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        // 
+        const result = await response.json();
+        if (response.ok) {
+            alert(result.message);
+        } else {
+            console.error("Erro ao enviar dados:", result.error);
+            alert("Erro ao enviar dados. Tente novamente.");
+        }
+    } catch (error) {
+        console.error("Erro de rede:", error);
+        alert("Erro de conexão. Verifique o servidor.");
+    }
 
 }
