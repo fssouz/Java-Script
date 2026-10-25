@@ -32,9 +32,18 @@
       var inp = document.getElementById('charc')
       var res = document.getElementById('results')
       var nchar = inp.value
+      res.textContent = ''
 
-      fetch(`https://api.tibiadata.com/v4/character/${nchar}`)
-      .then(response => response.json())
+      fetch(`https://api.tibiadata.com/v5/character/${encodeURIComponent(nchar)}`)
+      .then(response => {
+        if (!response.ok) {
+          res.textContent = response.status === 404
+            ? 'Personagem não encontrado (404).'
+            : `Erro ao obter dados (HTTP ${response.status}).`;
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         console.log(data)
       res.innerHTML = ``
@@ -62,7 +71,9 @@
       })
 
       .catch(error => {
-        res.innerHTML = `<br>Erro`
+        if (!res.textContent) {
+          res.textContent = 'Erro ao obter dados.';
+        }
         console.error('Erro ao obter dados:', error);
       })
     }
